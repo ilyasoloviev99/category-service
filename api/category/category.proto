@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package category.service.api.v1.category;
+
+option go_package = "/category";
+
+service CategoryService {
+  rpc GetCategory(GetCategoryRequest) returns (GetCategoryResponse);
+}
+
+message GetCategoryRequest {
+  string name = 1;
+}
+
+message GetCategoryResponse {
+  string name = 2;
+}
